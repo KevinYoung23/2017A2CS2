@@ -1,51 +1,53 @@
 # pickle.dump
 # zhang chenyang Rex
 import pickle
-class Car(object):
-    def __init__(self, name, year, owner):
-        self.name = name;
-        self.year = year;
-        self.owner = owner;
+class CarRecord:
+    def __init__(self,Name,Year,Price, Cylinder):
+        self.Name = Name
+        self.Year = Year
+        self.Price = Price
+        self.Cylinder = Cylinder
     def __repr__(self):
-        return "(%s,%s,%s)"%(self.name,self.year,self.owner);
-
+        return"(%s,%s,%s,%s)"%(self.Name, self.Year, self.Price, self.Cylinder)
 def add():
-    n = ''; # name
-    y = ''; # year
-    o = ''; # owner
-    while n == '' or len(n) > 20:
-        n = input('name of car: ');
-        if len(n) > 20:
+    Name = ''; # name
+    Year = ''; # year
+    Price = '';
+    Cylinder = ''# owner
+    while Name == '' or len(Name) > 20:
+        Name = input('name of car: ');
+        if len(Name) > 20:
             print('maximum 20 characters');
-    while y == '' or len(y) != 4:
-        y = input('year of purchase, must >= 2000');
-        for i in y:
+    while Year == '' or len(Year) != 4:
+        Year = input('year of purchase, must >= 2000');
+        for i in Year:
             if i not in '1234567890':
-                y == '';
+                Year == '';
                 print('incorrect format');
-        if len(y) < 4:
-            print('year not possible');
-    while o == '' or len(o) > 10:
-        o = input('owner of car');
-        if len(o) > 10:
+        if len(Year) != 4:
+            print('please change a year');
+    while Price == '' or len(Price) > 10:
+        Price = input('price of car');
+        if len(Price) > 10:
             print('maximum 10 characters');
+    Cylinder = input('the numcer of Cylinder')
 
-    return Car(n+(20-len(n))*' ',int(y),o+(10-len(n))*' ');
+    return CarRecord(Name+(20-len(Name))*' ',int(Year),Price+(10-len(Price))*' ', Cylinder+(3-len(Cylinder))*' ');
 
 def hashf(y):
     return y - 2000;
 
 def save(car):
     file = open('Cars.dat','rb+');
-    address = hashf(car.year);
+    address = hashf(car.Year);
     address = address * 110 + 1;
     file.seek(address);
     pickle.dump(car,file);
     file.close();
 
-def find(year):
+def find(Year):
     file = open('Cars.dat','rb');
-    address = hashf(year) * 110 + 1;
+    address = hashf(Year) * 110 + 1;
     file.seek(address);
     c = pickle.load(file)
     print(c);
@@ -53,14 +55,20 @@ def find(year):
 
 file = open('Cars.dat','wb');
 file.close()
-a = Car('laferrari           ',2002,'rexzzz    ');
-b = Car('veryhandsome666     ',2007,'zzzcccyyy ');
-c = Car('wulinghongguang     ',2006,'obmc      ');
+a = CarRecord('VW                  ',2002,'200000    ', '3  ');
+b = CarRecord('Audi                ',2007,'350000    ', '4  ');
+c = CarRecord('Mercedes            ',2006,'370000    ', '8  ');
+d = CarRecord('BMW                 ',2015,'300000    ', '6  ');
+e = CarRecord('Porsche             ',2012,'1200000   ', '12 ');
 save(a);
 save(b);
 save(c);
+save(d);
+save(e);
 find(2002);
 find(2006);
-find(2007);
+find(2015);
+find(2012);
+
 
 
