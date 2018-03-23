@@ -9,6 +9,7 @@ Research the purpose of JSP structure diagrams.
 
 
 Taks 1.2
+
 Find out the meaning of the different symbols inside the boxes and how these affect the structure of the program.
 
 
@@ -18,6 +19,7 @@ Repetition is shown by an asterisk(*) in the corner of components that are repea
 Selection is shown by a circle in the corner of components where only one is chosen.
 
 These affect the structure of the program by adding loops(while) or boolean expressing(if).
+
 
 
 
@@ -56,25 +58,26 @@ ENDWHILE
 
 Task 1.4
 
-A new role is introduced. Ay member of staff earring more than 70 and less than 90 is now called a Consultant.
-
-
-Edit the JSP structure diagram to include theConsultant role.
-Change the box that writes Salary>=90 to Salary>=70
-
-If it is False, assign Lead Developer.
-
-If it is True, include another boolean expression that write Salary>=90
-.
-If it is True, Assign Project Manager.
-if it is False, Assign Consultant.
-
+Add another block that says salary > 70
+if False, assign the role as leaddeveloper
+if True, goes to the selection of salary >= 90
+change that False situation to assign the role as consultant. 
 
 Task 1.5
 
-Edit the pseudocode algorithm to add the Consultant role.
-Look at task 1.4 and change the code accordingly.
 
+Change line 5 to IF salary >=70
+Change line 6 to IF salary >=90
+change the rest of the code like following, 
+THEN Role <--- projectmanager
+ELSE Role
+
+ <--- consultant
+ENDIF
+ELSE 
+Role <--- leaddeveloper
+ELSE
+Role <--- manager
 
 Task 1.6
 
