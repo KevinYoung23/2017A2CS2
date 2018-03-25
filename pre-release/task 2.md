@@ -62,7 +62,7 @@ ComputerGame  Vehicle
 |Hint: if you can't see my code clearly, open task2.py| 
 
 Task 2.3
-```python
+```
 # Task 2.3
 class Toy():
     def __init__(self, N,I,P,M):
