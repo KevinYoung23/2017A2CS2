@@ -47,6 +47,7 @@ GetHeight()
 GetLength()
 GetWeight()
 
+----------------------------------------------------------------
 
 Task 2.2
 
@@ -57,6 +58,9 @@ Inheritance: all attributes and methods of the base class are copied to the subc
      ----   ----
      |          |
 ComputerGame  Vehicle
+
+----------------------------------------------------------------
+
 
 
 |Hint: if you can't see my code clearly, open task2.py| 
