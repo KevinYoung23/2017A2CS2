@@ -53,11 +53,11 @@ Task 2.2
 
 Inheritance: all attributes and methods of the base class are copied to the subclass.
 
-         Toy
-         | |
-     ----   ----
-     |          |
-ComputerGame  Vehicle
+           Toy
+           | |
+        ----   ----
+       |          |
+|ComputerGame| |Vehicle|
 
 ----------------------------------------------------------------
 
