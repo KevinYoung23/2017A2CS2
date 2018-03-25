@@ -95,6 +95,7 @@ class Toy():
 ```
 
 Task 2.4
+```
 # Task 2.4
 class ComputerGame(Toy):
     def __init__(self, N,I,P,M,Ca,Co):
@@ -151,9 +152,10 @@ class Vehicle(Toy):
         print('Length:',self.GetLength())
         print('Weight:',self.GetWeight())
         print()
+```
 
 Task 2.5
-
+```
 # Task 2.5
 class User():
     def __init__(self, N, A):
@@ -169,34 +171,34 @@ class User():
         return(self.__Name)
     def GetUserAge(self):
         return(self.__Age)
-
+```
 Task 2.6
-
+```
 # Task 2.6
 A=Vehicle("red Sports Car", "RSC13", 15.00,6,"car",3.3,12.1,0.08)
 B=ComputerGame("Roulette","RSC14", 300,10,"Casino", "Ps4")
 C=Toy("JoyStick", "RSC15",100,6)
 List=[A,B,C]
-
+```
 
 Task 2.7
-
+```
 # Task 2.7
 def searchID(I):
     for i in range(len(List)):
         if List[i].GetID()==I:
             List[i].PrintDetails()
 
-
+```
 Task 2.8
-
+```
 # Task 2.8
 def discount(d):
     d = 1 - d/100
     for i in range (len(List)):
         List[i].SetPrice(List[i].GetPrice()*d)
 
-
+```
 
 Task 2.9
 A bubble sort changes the order of the list one item and another by comparing the two near once at a time.
@@ -209,7 +211,8 @@ A insertion sort goes from the back of the list to the start of the list.
 
 
 Task 2.10
-
+```
+Task 2.10
 def sort():
     for j in range(len(List)):
         for i in range(len(List)-1):
@@ -217,4 +220,5 @@ def sort():
                 temp= List[i]
                 List[i]=List[i+1]
                 List[i+1]=temp
+```
 
