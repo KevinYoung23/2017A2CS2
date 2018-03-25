@@ -59,6 +59,8 @@ Inheritance: all attributes and methods of the base class are copied to the subc
 ComputerGame  Vehicle
 
 
+|Hint: if you can't see my code clearly, open task2.py| 
+
 Task 2.3
 
 # Task 2.3
