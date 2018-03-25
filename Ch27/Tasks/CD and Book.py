@@ -141,46 +141,46 @@ def main():
             Email = input("Email address: ")         
             BorrowerID = NextBorrowerID          
             NextBorrowerID = NextBorrowerID + 1          
-            Borrower = Borrower(BName, Email, BorrowerID)  
+            Bo = Borrower(BName, Email, BorrowerID)  
         elif MenuChoice == 2:
             Title = input("Title: ")          
             Author = input("Author: ")          
             ItemID = NextBookID          
             NextBookID = NextBookID + 1          
-            Book = Book(Title, Author, ItemID)
+            B = Book(Title, Author, ItemID)
         elif MenuChoice == 3:
             Title = input("Title: ")          
             Artist = input("Artist: ")          
             ItemID = NextCD_ID          
             NextCD_ID = NextCD_ID + 1          
-            CD = CD(Title, Artist, ItemID)
+            C= CD(Title, Artist, ItemID)
         elif MenuChoice == 4:
             BorrowerID = input("Borrower ID: ")          
             ItemID = input("Book ID: ")          
-            Book.borrowing(ItemID, Borrower)
+            B.borrowing(ItemID, Borrower)
         elif MenuChoice == 5:
             BorrowerID = input('Borrower ID: ')
             ItemID = input('Book ID:')
-            Book.returning(ItemID, Borrower)
+            B.returning(ItemID, Bo)
         elif MenuChoice == 6:
             BorrowerID = input("Borrower ID: ")          
             ItemID = input("CD ID: ")         
-            CD.borrowing(ItemID, Borrower) 
+            C.borrowing(ItemID, Bo) 
         elif MenuChoice == 7:
             BorrowerID = input("Borrower ID: ")          
             ItemID = input("CD ID: ")          
-            CD.returning(ItemID, Borrower) 
+            C.returning(ItemID, Bo) 
         elif MenuChoice == 8:
             BorrowerID = input("Borrower ID: ")          
             ItemID = input("Book ID: ")          
-            CD.requestbook(ItemID, Borrower)
+            C.requestbook(ItemID, Bo)
         elif MenuChoice == 9:
             print("Borrower Details")          
             Borrower.printdetails()          
             print("Book Details")          
             Book.printdetails()          
             print("CD Details")          
-            CD.printdetails()
+            C.printdetails()
         elif MenuChoice == 99:
             Finish == True
         else:
