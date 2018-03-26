@@ -1,7 +1,7 @@
 Task 2.1
 
 Toy:
- 
+```
 Name       :STRING
 ID         :STRING
 Price      :FLOAT
@@ -16,10 +16,10 @@ GetName()
 GetID()
 GetPrice()
 GetMinimumAge()
-
+```
 
 ComputerGame:
-
+```
 Category   :STRING
 Console    :STRING
 
@@ -28,10 +28,10 @@ SetCategory()
 SetConsole()
 GetCategory()
 GetConsole() 
-
+```
 
 Vehicle:
-
+```
 Type       :STRING 
 Height     :FLOAT
 Length     :FLOAT
@@ -46,7 +46,7 @@ GetType()
 GetHeight()
 GetLength()
 GetWeight()
-
+```
 ----------------------------------------------------------------
 
 Task 2.2
