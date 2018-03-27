@@ -24,11 +24,11 @@ kelement(X,[_|T],N) :-
     M is N - 1,
     kelement(X,T,M).
 
-reverselist([],[]).
-reverselist([H|T],A|H :-
-    reverselist(T,A).
+reverselist([],X,X).
+reverselist([H|T],R,P) :-
+    reverselist(T,R,[H|P]).
 
 palindrome([],X,X).
-palindrome([H|T],L,A) :-
-    palindrome(T,L,[H|A]).
+palindrome([H|T],O,A) :-
+    palindrome(T,O,[H|A]).
 
