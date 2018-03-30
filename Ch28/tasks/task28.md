@@ -81,32 +81,22 @@ Task 28.06
 ||LDD |STACKBASE | |
 ||STO |STACKPTR  |initialise stack pointer to first location on stack |
 |LOOP1:| IN || read character |
- CMP #13  is it the end-of-line character? 
- JPE LOOP2 yes ¨C end the loop and go to next loop 
- STI STACKPTR store character in memory location pointed to by stack pointer 
- LDD STACKPTR  
-iIncrement stack pointer 
- 
- INC ACC 
- STO STACKPTR 
- JMP LOOP1  
-LOOP2: LDD STACKPTR  
- CMP STACKBASE stack empty ? 
- JPE ENDWORD  
- LDI STACKPTR Load contents of memory location at top of stack 
- OUT  output character 
-
- 
-
- LDD STACKPTR  
-decrement stack pointer 
- 
- DEC ACC 
- STO STACKPTR 
- JMP LOOP2  
-ENDWORD: END  end of program 
+|| CMP #13  ||is it the end-of-line character?| 
+ ||JPE |LOOP2 |yes ¨C end the loop and go to next loop |
+ ||STI| STACKPTR| store character in memory location pointed to by stack pointer |
+|| LDD |STACKPTR  ||
+||INC |ACC |iIncrement stack pointer |
+||STO|STACKPTR|| 
+||JMP |LOOP1  ||
+|LOOP2:| LDD |STACKPTR || 
+ ||CMP|STACKBASE |stack empty ?| 
+ ||JPE |ENDWORD  ||
+||LDI |STACKPTR |Load contents of memory location at top of stack |
+ ||OUT | |output character|
+||LDD |STACKPTR  || 
+ ||DEC| ACC |decrement stack pointer|
+ ||STO |STACKPTR ||
+ ||JMP |LOOP2 || 
+|ENDWORD: |END||  end of program |
     
-STACKBASE: STACK  address of beginning of stack 
-STACKPTR:   pointer to next free location on stack 
-STACK: ""  start of memory reserved for stack, currently empty 
     
