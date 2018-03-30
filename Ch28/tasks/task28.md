@@ -99,4 +99,49 @@ Task 28.06
  ||JMP |LOOP2 || 
 |ENDWORD: |END||  end of program |
     
-    
+*Exam-Style Question 
+1. a
+AND compares two bits in the same position and if both are 1 it puts a 1 in this position of the result word, otherwise it puts a 0 in this position of the result word  
+
+b AND MASK 
+MASK: #B00001111 // mask
+   
+c
+IN
+
+AND Mask
+
+LSL #4
+
+STO R
+
+IN
+
+AND Mask
+
+OR Result
+STO Result 
+END
+
+
+
+2.
+
+LDR #0
+
+LOOP: 
+IN
+
+STO  
+INC   IX
+
+CMP #33
+
+JPN  Loop
+
+END
+
+
+
+
+
